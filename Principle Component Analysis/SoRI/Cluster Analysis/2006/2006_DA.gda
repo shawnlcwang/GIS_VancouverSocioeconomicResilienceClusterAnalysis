@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <title>SoRI_2006_DA_Input</title>
+    <layers>
+        <layer>
+            <datasource>
+                <type>ESRI Shapefile</type>
+                <path>F:\MSc Thesis\CCAR Database\SoRI\PCA\2006\SoRI_2006_DA_Input.shp</path>
+            </datasource>
+            <layername>SoRI_2006_DA_Input</layername>
+            <title/>
+            <variable_order>
+                <time_ids>
+                    <id>time 0</id>
+                </time_ids>
+                <var>POLY_ID</var>
+                <var>DAUID</var>
+                <var>CSDUID</var>
+                <var>CCSUID</var>
+                <var>CDUID</var>
+                <var>ERUID</var>
+                <var>PRUID</var>
+                <var>CTUID</var>
+                <var>CMAUID</var>
+                <var>OID_</var>
+                <var>GEOGRAPHY</var>
+                <var>Z_HAI</var>
+                <var>Z_LU</var>
+                <var>Z_DR</var>
+                <var>Z_LI</var>
+                <var>Z_GT</var>
+                <var>Z_DAV</var>
+                <var>Z_I</var>
+                <var>Z_LP</var>
+                <var>Z_NL</var>
+                <var>Z_LA</var>
+                <var>Z_DMR</var>
+                <var>Z_1960C</var>
+                <var>FAC_1</var>
+                <var>FAC_2</var>
+                <var>FAC_3</var>
+                <var>SoRI</var>
+            </variable_order>
+            <custom_classifications/>
+            <spatial_weights>
+                <weights>
+                    <path>F:\MSc Thesis\CCAR Database\SoRI\PCA\2006\SoRI_2006_DA_SW.gal</path>
+                    <default/>
+                </weights>
+            </spatial_weights>
+            <default_vars>
+                <default_var>
+                    <name>SoRI</name>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+            </default_vars>
+        </layer>
+    </layers>
+</project>

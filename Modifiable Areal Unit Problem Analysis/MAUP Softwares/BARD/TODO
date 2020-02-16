@@ -1,0 +1,24 @@
+Todo:
+- HTML output refinements - report crosstabs
+- Block equivalency file output
+- Rgenoud cluster tuning
+- Population score method tuning
+- checkpoint during plan profiling
+- Miniball upgrade
+- Memory leak in plot.polylist investigate (workaround in place)
+- NULL changelists in score functions
+- compare plans different basemaps, ndists
+- tune genoud operators, generations, population size
+- dynamic score tuning in Tabu
+- option for flat areas in greedy search
+- profiling cluster optimizations across samples
+- allow double exchanges
+- block-level incremental moment scores
+- Compare plans w/differnt districts
+- as.data.frame <- data frame update methods
+- memory leak in greedy? in C?
+- createContiguousPlan --> performance drops as ndists increase, profile, include bbox time
+- profile greedy
+- LW, calcSplitScore, and  bboxCompactess dynamic score improvemenst
+- bias/responsiveness scores
+- tune TABU search -- tabulist based on single/bidirectional, full list

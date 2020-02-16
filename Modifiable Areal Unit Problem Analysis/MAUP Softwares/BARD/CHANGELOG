@@ -1,0 +1,142 @@
+Changelog
+
+0.01. Initial packaging on SF
+0.02. Added some performance enhancements 
+  - only update cost function for districts that are changed
+  - maintain boundary list, rather than selecting from all blocks
+0.03 Working on integrating miniball code
+0.04 Reorganization
+0.05 Plan comparison functions
+0.06 Cirincione plan gen
+0.07 Start refactoring score functions
+0.2  Restart refactoring
+0.3  Numerous changes
+     -- additional plan generation functions
+     -- improved import import/export
+     -- generic plotting,printing, summary methods
+     -- visual update framework for demos and illustration
+     -- more refinement functions
+     -- cluster computing with "snow"
+     -- memory of previous solutions
+     -- incremental cost functions
+     -- hole detection and repair
+0.4 ALPHA -- all major areas of functionality in place, but untested, undocumented
+    -- c code for contiguity checking (20x faster!)
+0.5 ALPHA -- tuning, cluster fixes, greedy refinement
+0.6 ALPHA 
+  -- complete code comments
+  -- code capitalization consistency
+  -- created shallow copy function for memory-efficiency in plan sampling
+  -- memory efficiency in plan referencing basemaps
+  -- complete code docs: keywords, refs [TODO: examples]
+  -- Fixed incremental score updating (in score functions)
+  -- Fixed Reock Score
+  -- Comparisons - missing value checks, refactor to return score matrices, preconfigured report
+  -- Tuned and added options to contiguous plan generation
+  -- detect score function without dynamic support
+  -- automatically work with plan or district scores
+0.7 ALPHA
+  -- GRASP refinement
+  -- interactive plan creation and editing using iplots
+  -- plan sampling and profiling completed
+0.8 BETA
+  -- PASSES ALL R CMD CHECKS
+  -- Tested on snow clusters
+  -- Lots of bug fixes   
+0.9 
+  -- Added TABU search
+  -- Added moment of inertia score
+  -- Added weighted Kmeans plan generation
+  -- Allow plot customizations
+  -- Perf improvements on greedy alg
+1.0 
+  -- Fix R 2.8, maptools, R CMD check warnings
+1.01 
+  -- Test under R 2.8.1
+  -- Workaround for iplots() under Mac OS
+  -- Avoid warnings for spdep under Mac OS
+  -- Pass R CMD CHECK completely
+  -- Many changes to vignette
+1.02
+  -- compile under gcc 2.43
+1.03
+  -- pass doc checks on R 2.9 unstable
+1.04
+  -- Imports tweaking
+  -- Vignette typos
+1.05
+  -- license issues
+  -- CMD check under 2.10
+1.06 
+  -- tmp workaround for deprecated spatialPolygons
+1.07 
+  -- migrated to SpatialDataFrame objects
+  -- Add perimeter/area compactness scores
+  -- Add options to generate/analyze single districts
+  -- Clarified original districts of recoded plans
+  -- Added option to sample, score, compare single districts
+  -- Spatial holes  district scoring
+ 1.08
+ -- added methods for map comparison, conversion to data frames, dim
+ -- bug fix for dynamic combine function
+ -- added function to fix contiguity problems in a plan
+ -- added checkpoint code for greedy and tabu
+ 1.09
+ -- bugfix in editPlanInteractive
+ -- added display mode for createGreedyContiguousPlan and createContiguousPlan
+ -- choropleth mapping of plans
+ 1.10
+ -- workaround for spdep changing use of unionSpatialPolygon
+ -- integrated patches into spdep's nb2poly for ~10x speedup on generating contiguity list
+ -- detect map projections and offer guidance, convert if rgdal installed
+ -- pre-index perimeter's greatly accelerating perimeter based calculations 
+ -- built and checked under R 2.11
+1.11
+-- remove custom poly2b now integrated into spdep
+-- fix C++ file naming and Solaris issues
+-- add suffolk map as data() to reduce example timings 
+1.12
+-- really remove custom poly2nb
+-- R multicore cupport
+-- Speeded up greedy/tabu by x5
+1.13
+-- Improved the effectiveness of simulated annealing dramatically by implementing reannealing 
+-- Improved performance of annealing as well, and added a very fast "quench" option
+-- Improved performance of calcContiguityScore moderately
+-- Added calcBBoxCompactness
+-- Added HTML methods
+-- Added spatial data frame conversion methods
+-- Improvements to createRandomPopPlan
+1.14
+-- Fixed undocumented .Random.seed dataset
+-- Fix bug w/ refineNelder exiting on NULL score
+-- Clarify warning message on editPlanInteractive when dependencies not installed
+1.15
+-- Use ENHANCES in package description
+-- Fix bug in createAssignedPlan in detecting continuous id range
+1.16
+-- Automatically "repair" non-contiguous block geometry 
+-- Use RGEOS to speed up intial creation of spatial indices
+-- Allow levels() on bardplans for printing and reporting
+-- Reduce memory footprint of bardmap creation
+-- Reduce memory footprint of loaded bard plans
+1.17
+-- Normalize MI scores
+-- Add CalcSplitScore -- report on splits of counties/tracts etc.
+-- check for invalid rgeos geometries on load
+-- Add calcIneqScore -- report on inequality measure (gini, coef of var) for district income, etc.
+-- Automatically clean geometry invalid under GEOS (with rgeos installed)
+1.18
+-- fix bug in createAssignedDistrict in handling factors, missing blocks
+-- limit number of unassigned blocks reported in PMPreport
+-- workaround changes in Rgeos to poly_foundInBox createSPCcomment
+1.19
+-- incorporated JSS final article changes
+-- greatly reduced doc size -- thanks to Achim Zeileis and Brian Ripley
+1.20
+-- extensions to *BardMap and sdf2BardMap for DistrictBuilder
+1.21
+-- fix bug in writeBardMap with keepgeom=false
+1.22
+-- JSS final volume citation
+-- Merge back in Brian Ripleys solaris fix for miniball
